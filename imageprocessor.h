@@ -81,6 +81,15 @@ private slots:
     void div_images(const QImage &img1, const QImage &img2);
     void diff_images(const QImage &img1, const QImage &img2);
 
+    /* GEOMETRICAL SLOTS */
+    void on_actionHorizontal_Mirror_triggered();
+
+    void on_actionVertical_Mirror_triggered();
+
+    void on_actionTransposed_Image_triggered();
+
+    void on_actionScale_triggered();
+
 private:
     Ui::ImageProcessor *ui;
     Image* current_image;

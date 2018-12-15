@@ -485,8 +485,8 @@ void ImageProcessor::on_actionSpecification_triggered()
                  int hue = QColor(image.pixel(i,j)).hue();
                  int lightness = QColor(image.pixel(i,j)).lightness();
 
-                 if (lightness != LUT[lightness])
-                     int l = 0;
+                // if (lightness != LUT[lightness])
+                 //    int l = 0;
                  image.setPixel(i,j, QColor::fromHsl(hue, saturation , LUT[lightness]).rgb());
              }
 
@@ -1424,3 +1424,5 @@ void ImageProcessor::on_actionMax_triggered()
         }
     }
 }
+
+

@@ -116,20 +116,22 @@
      <addaction name="actionMin"/>
      <addaction name="actionMax"/>
     </widget>
+    <widget class="QMenu" name="menuGeometrical_Operations">
+     <property name="title">
+      <string>Geometrical Operations</string>
+     </property>
+     <addaction name="actionHorizontal_Mirror"/>
+     <addaction name="actionVertical_Mirror"/>
+     <addaction name="actionTransposed_Image"/>
+     <addaction name="actionScale"/>
+    </widget>
     <addaction name="menuLinear_Operations"/>
     <addaction name="actionGamma"/>
     <addaction name="menuHistogram_Operations"/>
-    <addaction name="actionSmooth"/>
-    <addaction name="actionSharpen"/>
-    <addaction name="actionFind_edges"/>
-    <addaction name="actionFind_maxima"/>
-    <addaction name="actionEnhance_contrast"/>
-    <addaction name="actionShadows"/>
     <addaction name="menuMath"/>
-    <addaction name="actionFTP"/>
-    <addaction name="actionFilters"/>
-    <addaction name="actionNoise"/>
     <addaction name="actionImage_calculator"/>
+    <addaction name="separator"/>
+    <addaction name="menuGeometrical_Operations"/>
    </widget>
    <widget class="QMenu" name="menuHelp_2">
     <property name="title">
@@ -343,6 +345,26 @@
   <action name="actionThreshold">
    <property name="text">
     <string>Threshold...</string>
+   </property>
+  </action>
+  <action name="actionHorizontal_Mirror">
+   <property name="text">
+    <string>Horizontal Mirror</string>
+   </property>
+  </action>
+  <action name="actionVertical_Mirror">
+   <property name="text">
+    <string>Vertical Mirror</string>
+   </property>
+  </action>
+  <action name="actionTransposed_Image">
+   <property name="text">
+    <string>Transposed Image</string>
+   </property>
+  </action>
+  <action name="actionScale">
+   <property name="text">
+    <string>Scale...</string>
    </property>
   </action>
  </widget>

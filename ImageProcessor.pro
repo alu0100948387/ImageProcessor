@@ -30,7 +30,8 @@ SOURCES += \
     histogram.cpp \
     linear.cpp \
     gamma.cpp \
-    brightness.cpp
+    brightness.cpp \
+    geometric.cpp
 
 HEADERS += \
         imageprocessor.h \

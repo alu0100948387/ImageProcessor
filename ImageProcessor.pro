@@ -31,7 +31,8 @@ SOURCES += \
     linear.cpp \
     gamma.cpp \
     brightness.cpp \
-    geometric.cpp
+    geometric.cpp \
+    rotation.cpp
 
 HEADERS += \
         imageprocessor.h \

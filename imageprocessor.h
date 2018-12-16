@@ -90,6 +90,8 @@ private slots:
 
     void on_actionScale_triggered();
 
+    void on_action_rotation_triggered();
+
 private:
     Ui::ImageProcessor *ui;
     Image* current_image;

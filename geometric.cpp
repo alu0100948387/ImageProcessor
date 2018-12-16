@@ -4,55 +4,91 @@ const int PROX_NEIGHBOURS = 0;
 
 void ImageProcessor::on_actionHorizontal_Mirror_triggered()
 {
-    /* build new image */
-    QImage image = *current_image->get_image();
 
-    for(int i=0; i<image.width(); i++)
-            for(int j=0; j<image.height(); j++)
-            {
-                int saturation = QColor((*current_image).get_image()->pixel(image.width()-1-i,j)).saturation();
-                int hue = QColor((*current_image).get_image()->pixel(image.width()-1-i,j)).hue();
-                int lightness = QColor((*current_image).get_image()->pixel(image.width()-1-i,j)).lightness();
 
-                image.setPixel(i,j, QColor::fromHsl(hue, saturation , lightness).rgb());
-            }
+    if (current_image == nullptr)
+    {
+        QMessageBox::warning(this, tr("My Application"),
+                                       tr("No image selected.\n"),
+                                       QMessageBox::Cancel);
 
-     newWindow(image);
+    }else
+    {
+
+        /* build new image */
+        QImage image = *current_image->get_image();
+
+        for(int i=0; i<image.width(); i++)
+                for(int j=0; j<image.height(); j++)
+                {
+                    int saturation = QColor((*current_image).get_image()->pixel(image.width()-1-i,j)).saturation();
+                    int hue = QColor((*current_image).get_image()->pixel(image.width()-1-i,j)).hue();
+                    int lightness = QColor((*current_image).get_image()->pixel(image.width()-1-i,j)).lightness();
+
+                    image.setPixel(i,j, QColor::fromHsl(hue, saturation , lightness).rgb());
+                }
+
+         newWindow(image);
+
+    }
 }
 
 void ImageProcessor::on_actionVertical_Mirror_triggered()
 {
-    /* build new image */
-    QImage image = *current_image->get_image();
 
-    for(int i=0; i<image.width(); i++)
-            for(int j=0; j<image.height(); j++)
-            {
-                int saturation = QColor((*current_image).get_image()->pixel(i,image.height()-1-j)).saturation();
-                int hue = QColor((*current_image).get_image()->pixel(i,image.height()-1-j)).hue();
-                int lightness = QColor((*current_image).get_image()->pixel(i,image.height()-1-j)).lightness();
+    if (current_image == nullptr)
+    {
+        QMessageBox::warning(this, tr("My Application"),
+                                       tr("No image selected.\n"),
+                                       QMessageBox::Cancel);
 
-                image.setPixel(i,j, QColor::fromHsl(hue, saturation , lightness).rgb());
-            }
+    }else
+    {
 
-     newWindow(image);
+        /* build new image */
+        QImage image = *current_image->get_image();
+
+        for(int i=0; i<image.width(); i++)
+                for(int j=0; j<image.height(); j++)
+                {
+                    int saturation = QColor((*current_image).get_image()->pixel(i,image.height()-1-j)).saturation();
+                    int hue = QColor((*current_image).get_image()->pixel(i,image.height()-1-j)).hue();
+                    int lightness = QColor((*current_image).get_image()->pixel(i,image.height()-1-j)).lightness();
+
+                    image.setPixel(i,j, QColor::fromHsl(hue, saturation , lightness).rgb());
+                }
+
+         newWindow(image);
+
+    }
 }
 
 void ImageProcessor::on_actionTransposed_Image_triggered()
 {
-    /* build new image */
-    QImage image(current_image->get_image()->height(),current_image->get_image()->width(),QImage::Format_ARGB32);
+    if (current_image == nullptr)
+    {
+        QMessageBox::warning(this, tr("My Application"),
+                                       tr("No image selected.\n"),
+                                       QMessageBox::Cancel);
 
-    for(int i=0; i<current_image->get_image()->width(); i++)
-            for(int j=0; j<current_image->get_image()->height(); j++)
-            {
-                int saturation = QColor((*current_image).get_image()->pixel(j,i)).saturation();
-                int hue = QColor((*current_image).get_image()->pixel(j,i)).hue();
-                int lightness = QColor((*current_image).get_image()->pixel(j,i)).lightness();
+    }else
+    {
 
-                image.setPixel(i,j, QColor::fromHsl(hue, saturation , lightness).rgb());
-            }
-     newWindow(image);
+        /* build new image */
+        QImage image(current_image->get_image()->height(),current_image->get_image()->width(),QImage::Format_ARGB32);
+
+        for(int i=0; i<current_image->get_image()->width(); i++)
+                for(int j=0; j<current_image->get_image()->height(); j++)
+                {
+                    int saturation = QColor((*current_image).get_image()->pixel(j,i)).saturation();
+                    int hue = QColor((*current_image).get_image()->pixel(j,i)).hue();
+                    int lightness = QColor((*current_image).get_image()->pixel(j,i)).lightness();
+
+                    image.setPixel(i,j, QColor::fromHsl(hue, saturation , lightness).rgb());
+                }
+         newWindow(image);
+
+    }
 }
 
 

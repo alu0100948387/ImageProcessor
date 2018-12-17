@@ -19,7 +19,7 @@ void ImageProcessor::on_actionRotate_triggered()
         QStringList items;
         items << tr("None") << tr("Bilineal") << tr("Bicubic");
 
-        QString item = QInputDialog::getItem(this, tr("QInputDialog::getItem()"),
+        QString item = QInputDialog::getItem(this, tr("Interpolation"),
                                              tr("Interpolation:"), items, 0, false, &ok1);
 
         if (ok)

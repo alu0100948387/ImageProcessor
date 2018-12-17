@@ -4,7 +4,11 @@
 ImageProcessor::ImageProcessor(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ImageProcessor),
+    current_image(nullptr),
+    extension(),
+    opened_images(),
     image_counter(0)
+
 {
     ui->setupUi(this);
 

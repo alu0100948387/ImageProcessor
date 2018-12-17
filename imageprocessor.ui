@@ -45,7 +45,7 @@
      <x>0</x>
      <y>0</y>
      <width>446</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -124,6 +124,7 @@
      <addaction name="actionVertical_Mirror"/>
      <addaction name="actionTransposed_Image"/>
      <addaction name="actionScale"/>
+     <addaction name="actionRotate"/>
     </widget>
     <addaction name="menuLinear_Operations"/>
     <addaction name="actionGamma"/>
@@ -365,6 +366,11 @@
   <action name="actionScale">
    <property name="text">
     <string>Scale...</string>
+   </property>
+  </action>
+  <action name="actionRotate">
+   <property name="text">
+    <string>Rotate...</string>
    </property>
   </action>
  </widget>

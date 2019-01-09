@@ -77,6 +77,7 @@ void ImageProcessor::on_actionTransposed_Image_triggered()
         /* build new image */
         QImage image(current_image->get_image()->height(),current_image->get_image()->width(),QImage::Format_ARGB32);
 
+
         for(int i=0; i<current_image->get_image()->width(); i++)
                 for(int j=0; j<current_image->get_image()->height(); j++)
                 {
@@ -86,6 +87,10 @@ void ImageProcessor::on_actionTransposed_Image_triggered()
 
                     image.setPixel(i,j, QColor::fromHsl(hue, saturation , lightness).rgb());
                 }
+
+        // Necesario para que el nombre sea Nombre + índice
+        image.setText("Name:", current_image->get_image()->text("Name:"));
+
          newWindow(image);
 
     }

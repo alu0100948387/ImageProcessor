@@ -1,6 +1,5 @@
 ﻿#include <imageprocessor.h>
 
-const int PROX_NEIGHBOURS = 0;
 
 void ImageProcessor::on_actionHorizontal_Mirror_triggered()
 {
@@ -225,8 +224,6 @@ void ImageProcessor::on_actionScale_triggered()
              int D_red= QColor((*current_image).get_image()->pixel(X_pos,Y_ant)).red();
              int D_green= QColor((*current_image).get_image()->pixel(X_pos,Y_ant)).green();
              int D_blue= QColor((*current_image).get_image()->pixel(X_pos,Y_ant)).blue();
-
-
 
               float red = C_red + (D_red + C_red)* p + (A_red - C_red)* q + (B_red + C_red - A_red - D_red) * p * q;
               float green = C_green + (D_green + C_green)* p + (A_green - C_green)* q + (B_green + C_green - A_green - D_green) * p * q;

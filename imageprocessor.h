@@ -6,10 +6,13 @@
 #include <QImage>
 #include <QToolBar>
 
+
 extern QVector<QPoint> points_;
 extern float gamma_value;
 extern double brightness_old, contrast_old;
 extern double brightness_new, contrast_new;
+
+const int PROX_NEIGHBOURS = 0;
 
 #include "image.h"
 #include "histogram.h"

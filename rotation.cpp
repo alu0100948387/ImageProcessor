@@ -18,7 +18,7 @@ void ImageProcessor::on_actionRotate_triggered()
     QFormLayout form(&dialog);
 
     QLineEdit *degree_edit = new QLineEdit(&dialog);
-    QString degree_menu = QString("Porcentaje escala Y:");
+    QString degree_menu = QString("Rotación en grados a la derecha:");
     form.addRow(degree_menu, degree_edit);
 
     QRadioButton* ropin = new QRadioButton(tr("Rotar + pintar"), &dialog);
